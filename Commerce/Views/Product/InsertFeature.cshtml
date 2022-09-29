@@ -1,0 +1,17 @@
+﻿@model Commerce.Panel.Models.Controller.Feature
+
+<form method="post" asp-controller="Product" asp-action="InsertFeature" asp-route-id=@ViewData["ProductId"]>
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Value"></label>
+        <input asp-for="Value"/>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Add Feature" class="btn btn-outline-success"/>
+    </div>
+</form>

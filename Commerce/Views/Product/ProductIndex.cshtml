@@ -1,0 +1,30 @@
+﻿@model List<Commerce.Panel.Models.View.Product>
+
+    <div class="row">
+        <div class="col-md-10">Products</div>
+        <div class="col-md-2"><a asp-controller="Product" asp-action="Insert">Add Product</a></div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+
+    <table class="table">
+        <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th></th>
+        </thead>
+        <tbody>
+
+        @foreach(var e in this.Model)
+        {
+            
+            <tr>
+                    <td>@e.Name</td>
+                    <td>@e.Price</td>
+                    <td><a asp-controller="Product" asp-action="Product" asp-route-id="@e.Id">Info</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+        </div>
+    </div>

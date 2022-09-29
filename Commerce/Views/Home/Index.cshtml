@@ -1,0 +1,29 @@
+﻿@model List<Commerce.Panel.Models.View.ProductListItem>
+
+    <div class="row">
+        <div class="col-md-10 h3">Welcome to Commerce</div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+
+    <table class="table">
+        <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th></th>
+        </thead>
+        <tbody>
+
+        @foreach(var e in this.Model)
+        {
+            
+            <tr>
+                    <td>@e.Name</td>
+                    <td>@e.Price</td>
+                    <td><a asp-controller="Buyout" asp-action="Product" asp-route-id="@e.Id" asp-route-featureId="@e.FeatureId">Buy</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+        </div>
+    </div>

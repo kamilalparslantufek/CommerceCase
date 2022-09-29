@@ -1,0 +1,27 @@
+﻿@model Commerce.Panel.Models.View.ProductInfo
+<h2>Product</h2>
+<hr />
+<div class="row">
+    <div class="col-md-3">Name</div>
+    <div class="col-md-9">@Model.Name</div>
+</div>
+<div class="row">
+    <div class="col-md-3">Price</div>
+    <div class="col-md-9">@Model.Price</div>
+</div>
+
+<div class="row">
+    <div class="col-md-8"><h3>Features</h3></div>
+    <div class="col-md-4">
+        <a class="btn btn-outline-success" asp-controller="Product" asp-action="InsertFeature" asp-route-id="@Model.Id">Add Feature</a>
+        </div>
+</div>
+
+<hr />
+
+@foreach(var i in Model.Features){
+   <div class="row">
+    <div class="col-md-3">@i.Name</div>
+    <div class="col-md-9">@i.Value</div>
+</div>
+}

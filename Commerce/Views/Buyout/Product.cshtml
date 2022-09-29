@@ -1,0 +1,39 @@
+﻿@model Commerce.Panel.Models.View.BuyoutProduct
+
+
+<div class="row">
+    <div class="col-md-3"><h3>Product</h3></div>
+    <div class="col-md-3"><h3>@Model.Name</h3></div>
+</div>
+<div class="row">
+    <div class="col-md-3">Price</div>
+    <div class="col-md-3">@Model.Price</div>
+</div>
+<br />
+        <h3>Features</h3>
+<hr />
+        @foreach(var i in Model.Features)
+        {
+            <div class="row">
+                <div class="col-md-3">
+                    @i.Name
+                </div>
+                <div class="col-md-9">
+                    @i.Value
+                </div>
+            </div>
+        }
+        <br />
+        <h3>Comments</h3>
+        <hr />
+        @foreach(var i in Model?.Comments){
+            <div class="row">
+                <div class="col-md-3">
+                    <div>@i.Name</div>
+                    <div class="text-black-50">@i.Username</div>
+                </div>
+                <div class="col-md-9">
+                    <p>@i.Text</p>
+                </div>
+            </div>
+        }

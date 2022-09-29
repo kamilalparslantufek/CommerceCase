@@ -208,7 +208,7 @@ namespace Commerce.Data.Engine.Core.Database
                 {
                     new Product.Comment
                     {
-                        Id = Guid.Parse("9246cc83-4f1c-4ca0-be9b-272d96776dcc"),
+                        Id = Guid.Parse("1a33696d-7550-4941-9f7a-f24684f22b25"),
                         ProductId = Guid.Parse("F5A61422-7388-4E40-B8FC-6270988AAF2D"),
                         UserId = Guid.Parse("b6292ff4-7024-4048-9e8a-08daa1c1b7a6"),
                         Text = "TEST COMMENT",
@@ -217,7 +217,7 @@ namespace Commerce.Data.Engine.Core.Database
                     },
                     new Product.Comment
                     {
-                        Id = Guid.Parse("9246cc83-4f1c-4ca0-be9b-272d96776dcc"),
+                        Id = Guid.Parse("e9746740-d12a-4cae-ad0e-fb2d6b378c1a"),
                         ProductId = Guid.Parse("F5A61422-7388-4E40-B8FC-6270988AAF2D"),
                         UserId = Guid.Parse("b6292ff4-7024-4048-9e8a-08daa1c1b7a6"),
                         Text = "TEST COMMENT2",
